@@ -29,11 +29,15 @@
 
     <script src="./js/main.js"></script>
     <script>
-        if ("serviceWorker" in navigator) {
-            window.addEventListener("load", function () {
-                navigator.serviceWorker.register("./sw.js");
-            });
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register('/offlineGeolocation/sw.js', {scope: '/offlineGeolocation/'})
         }
+
+        // if ("serviceWorker" in navigator) {
+        //     window.addEventListener("load", function () {
+        //         navigator.serviceWorker.register("./sw.js");
+        //     });
+        // }
     </script>
 </body>
 </html>
