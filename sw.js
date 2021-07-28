@@ -4,6 +4,7 @@ var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
   // Add URL you want to cache in this list.
   "/offlineGeolocation/",
+  "/offlineGeolocation/favicon.jpg",
   "/offlineGeolocation/index.html",
   "/offlineGeolocation/css/normalize.css",
   "/offlineGeolocation/css/styles.css",
