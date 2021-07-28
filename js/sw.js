@@ -1,6 +1,5 @@
 var CACHE_NAME = "my-offline-cache";
 var urslToCache = [
-  "./",
   "./css/normalize.css",
   "./css/styles.css",
   "./js/main.js",
