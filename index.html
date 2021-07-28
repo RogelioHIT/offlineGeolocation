@@ -30,6 +30,7 @@
     <script src="./js/main.js"></script>
     <script>
         if (navigator.serviceWorker) {
+            console.log("register service worker")
             navigator.serviceWorker.register('/offlineGeolocation/sw.js', {scope: '/offlineGeolocation/'})
         }
 
