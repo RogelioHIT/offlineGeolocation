@@ -3,12 +3,12 @@ var VERSION = "v_01"; // Version of the off-line cache (change this value everyt
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
   // Add URL you want to cache in this list.
-  "./offlineGeolocation/",
-  "./offlineGeolocation/index.html",
-  "./offlineGeolocation/css/normalize.css",
-  "./offlineGeolocation/css/styles.css",
-  "./offlineGeolocation/js/main.js",
-  "./offlineGeolocation/assets/loading.gif",
+  "/offlineGeolocation/",
+  "/offlineGeolocation/index.html",
+  "/offlineGeolocation/css/normalize.css",
+  "/offlineGeolocation/css/styles.css",
+  "/offlineGeolocation/js/main.js",
+  "/offlineGeolocation/assets/loading.gif",
 ];
 
 // Respond with cached resources
