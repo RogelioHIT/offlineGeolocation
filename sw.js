@@ -43,6 +43,10 @@ self.addEventListener("install", function (e) {
   );
 });
 
+self.addEventListener("error", function (e) {
+  console.log("ERROR: ", e.filename, e.lineno, e.colno, e.message);
+});
+
 // Delete outdated caches
 self.addEventListener("activate", function (e) {
   e.waitUntil(
