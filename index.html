@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline Geo-Location</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1 class="title">Offline Geo-location</h1>
+    <div class="wrapper">
+        <div class="position">
+            <div class="inner-wrapper">
+                <div id="latitude" class="label">Latitud:</div>
+                <div id="longitude" class="label">Longitud:</div>
+                <div id="accuracy" class="label">Exactitud:</div>
+            </div>
+    
+            <button class="locationButton">Get Location</button>
+        </div>
+    </div>
+
+    <div class="modal">
+        <img src="./assets/loading.gif" alt="">
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register("./js/sw.js");
+            });
+        }
+    </script>
+</body>
+</html>
