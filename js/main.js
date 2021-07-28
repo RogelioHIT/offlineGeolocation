@@ -5,7 +5,7 @@
     try {
       updateLocation();
     } catch (evt) {
-      console.log(evt.message);
+      console.log("Ocurrio un error: ", evt.message);
       alert("Activa los servicios de localización");
     }
   });
