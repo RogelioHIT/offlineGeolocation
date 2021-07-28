@@ -2,7 +2,12 @@
   let locationButton = document.querySelector(".locationButton");
   locationButton.addEventListener("click", function () {
     showModal();
-    updateLocation();
+    try {
+      updateLocation();
+    } catch (evt) {
+      console.log(evt.message);
+      alert("Activa los servicios de localización");
+    }
   });
 
   function updateLocation() {
@@ -14,8 +19,8 @@
       function (location) {
         hideModal();
         latitudeDiv.innerHTML = `Latitud:<span>${location.coords.latitude}</span>`;
-        longitudeDiv.innerHTML = `Latitud:<span>${location.coords.longitude}</span>`;
-        accuracyDiv.innerHTML = `Latitud:<span>${location.coords.accuracy}</span>`;
+        longitudeDiv.innerHTML = `Longitud:<span>${location.coords.longitude}</span>`;
+        accuracyDiv.innerHTML = `Accuracy:<span>${location.coords.accuracy}</span>`;
       },
       function (err) {
         hideModal();
